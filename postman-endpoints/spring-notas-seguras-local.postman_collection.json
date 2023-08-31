@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "cf764895-bb0c-4416-961d-658fb856d9e8",
+		"name": "spring-notas-seguras-local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4381878"
+	},
+	"item": [
+		{
+			"name": "GET - Notas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/api/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Nota por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/api/notas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"notas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Agregar nota",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsInBlcm1pc3Npb25zIjpbeyJhdXRob3JpdHkiOiJTQVZFX09ORV9OT1RFIn0seyJhdXRob3JpdHkiOiJNT0RJRllfT05FX05PVEUifSx7ImF1dGhvcml0eSI6IkRFTEVURV9PTkVfTk9URSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfTk9URVMifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwibmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MzQ1MDIyOCwiZXhwIjoxNjkzNDUyMDI4fQ.XPgF64ZsrZOplibO4sY5jEro_06EEJdjFSLba7akEhs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Recién comprendo las bondades de Java\",\r\n    \"contenido\" : \"No podía ser de otra forma. Esta vez estoy aprendiendo Spring Boot. Se ve interesante a la fecha.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/api/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Editar nota",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsInBlcm1pc3Npb25zIjpbeyJhdXRob3JpdHkiOiJTQVZFX09ORV9OT1RFIn0seyJhdXRob3JpdHkiOiJNT0RJRllfT05FX05PVEUifSx7ImF1dGhvcml0eSI6IkRFTEVURV9PTkVfTk9URSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfTk9URVMifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwibmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MzQ1MDIyOCwiZXhwIjoxNjkzNDUyMDI4fQ.XPgF64ZsrZOplibO4sY5jEro_06EEJdjFSLba7akEhs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Tercera nota\",\r\n    \"contenido\" : \"Una nota de prueba para este aplicativo en Java\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/api/notas/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"notas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Borrar nota",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsInBlcm1pc3Npb25zIjpbeyJhdXRob3JpdHkiOiJTQVZFX09ORV9OT1RFIn0seyJhdXRob3JpdHkiOiJNT0RJRllfT05FX05PVEUifSx7ImF1dGhvcml0eSI6IkRFTEVURV9PTkVfTk9URSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfTk9URVMifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwibmFtZSI6ImFkbWluaXN0cmFkb3IiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MzQ1MDIyOCwiZXhwIjoxNjkzNDUyMDI4fQ.XPgF64ZsrZOplibO4sY5jEro_06EEJdjFSLba7akEhs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/api/notas/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"notas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"clave456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
